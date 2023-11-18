@@ -1,23 +1,13 @@
-import Pricing from '@/components/Pricing';
-import {
-  getSession,
-  getSubscription,
-  getActiveProductsWithPrices
-} from '@/app/supabase-server';
+import React from 'react';
 
-export default async function PricingPage() {
-  const [session, products, subscription] = await Promise.all([
-    getSession(),
-    getActiveProductsWithPrices(),
-    getSubscription()
-  ]);
-
+export default function HomePage() {
   return (
-    <Pricing
-      session={session}
-      user={session?.user}
-      products={products}
-      subscription={subscription}
-    />
+    <section className="bg-black">
+      <div className="max-w-6xl px-4 py-8 mx-auto sm:py-24 sm:px-6 lg:px-8">
+          <p className="text-4xl font-extrabold text-white sm:text-center sm:text-6xl">
+            Welcome to Homebrew University 👋
+          </p>
+      </div>
+    </section>
   );
 }

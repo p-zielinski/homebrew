@@ -38,9 +38,9 @@ export default async function Navbar() {
               <Link href="/campus" className={s.link}>
                 🍺Campus
               </Link>
-              {/* <Link href="/pricing" className={s.link}>
+              <Link href="/pricing" className={s.link}>
                 🤑Pricing
-              </Link> */}
+              </Link>
             </nav>
           </div>
           <div className="flex justify-end flex-1 space-x-8">
