@@ -38,9 +38,9 @@ export default async function Navbar() {
               <Link href="/campus" className={s.link}>
                 🍺Campus
               </Link>
-              <Link href="/pricing" className={s.link}>
+              {/* <Link href="/pricing" className={s.link}>
                 🤑Pricing
-              </Link>
+              </Link> */}
             </nav>
           </div>
           <div className="flex justify-end flex-1 space-x-8">
@@ -48,12 +48,12 @@ export default async function Navbar() {
               <SignOutButton />
             ) : (
               <Link href="/signin" className={s.link}>
-                Sign in
+                🤘Join
               </Link>
             )}
                           {user && (
                 <Link href="/account" className={s.link}>
-                  Account
+                 👽 Profile
                 </Link>
             )}
           </div>
