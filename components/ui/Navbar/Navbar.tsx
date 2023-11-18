@@ -22,15 +22,25 @@ export default async function Navbar() {
             <Link href="/" className="w-48">
               <img src="/logofinal.png" alt="Logo" />
             </Link>
-            <nav className="hidden ml-6 space-x-2 lg:block">
-              <Link href="/" className={s.link}>
-                Pricing
+            <nav className="hidden ml-6 space-x-3 lg:block">
+              {/* <Link href="/jobs" className={s.link}>
+                🚀Jobs
+              </Link> */}
+              <Link href="/dashboard" className={s.link}>
+                🕹️Dashboard
               </Link>
-              {user && (
-                <Link href="/account" className={s.link}>
-                  Account
-                </Link>
-              )}
+              <Link href="/courses" className={s.link}>
+                🧠Courses
+              </Link>
+              {/* <Link href="/colleges" className={s.link}>
+               🏛️Colleges
+              </Link> */}
+              <Link href="/campus" className={s.link}>
+                🍺Campus
+              </Link>
+              {/* <Link href="/pricing" className={s.link}>
+                🤑Pricing
+              </Link> */}
             </nav>
           </div>
           <div className="flex justify-end flex-1 space-x-8">
@@ -40,6 +50,11 @@ export default async function Navbar() {
               <Link href="/signin" className={s.link}>
                 Sign in
               </Link>
+            )}
+                          {user && (
+                <Link href="/account" className={s.link}>
+                  Account
+                </Link>
             )}
           </div>
         </div>
