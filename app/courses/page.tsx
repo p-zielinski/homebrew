@@ -1,5 +1,6 @@
 import React from 'react';
-import CourseCard from '@/components/ui/CourseCard' // Adjust the path as necessary
+import CourseCard from '@/components/ui/CourseCard'
+import SubHero from '@/components/ui/SubHero';
 
 
 // Define CoursesPage component
@@ -26,17 +27,13 @@ export default function CoursesPage() {
     ];
 
     return (
-        <section className="bg-black">
-            <div className="max-w-4xl px-4 py-8 mx-auto sm:py-24 sm:px-6 lg:px-8">
-                <p className="text-4xl pt-8 font-extrabold text-white sm:text-center sm:text-6xl">
-                    Courses🧠
-                </p>
-                <p className="text-white pt-6 sm:text-center sm:text-3xl p">
-                    Learn something cool today
-                </p>
-            </div>
+        <section>
+            <SubHero 
+                title="Courses🧠" 
+                description="Learn something cool today" 
+            />
 
-            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="pt-12 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {courses.map((course, index) => (
                     <CourseCard key={index} {...course} />
                 ))}

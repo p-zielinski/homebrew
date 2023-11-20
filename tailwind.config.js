@@ -12,7 +12,10 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans]
-      }
+      },
+      backgroundImage: {
+        'vc-border-gradient': 'radial-gradient(at left top, #D0D0D0, #555555)',
+      },
     }
   },
   plugins: []

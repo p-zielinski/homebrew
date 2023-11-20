@@ -16,7 +16,7 @@ export default async function Navbar() {
       <a href="#skip" className="sr-only focus:not-sr-only">
         Skip to content
       </a>
-      <div className="px-6">
+      <div className="px-8 ">
         <div className="relative flex flex-row justify-between py-4 align-center md:py-8">
           <div className="flex items-center flex-1">
             <Link href="/" className="w-48">
@@ -38,6 +38,9 @@ export default async function Navbar() {
               <Link href="/campus" className={s.link}>
                 🍺Campus
               </Link>
+              {/* <Link href="/campus" className={s.link}>
+                📝Story
+              </Link> */}
               {/* <Link href="/pricing" className={s.link}>
                 🤑Pricing
               </Link> */}

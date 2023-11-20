@@ -18,7 +18,7 @@ interface CourseCardProps {
 const CourseCard: React.FC<CourseCardProps> = ({ title, college, rating, description, duration, studentCount, imageSrc }) => {
     return (
     <Link href={`/courses/${title}`} passHref>
-        <div className="course-card border-2 rounded-xl border-[#FF00FF]">
+        <div className="course-card border-2 rounded-xl border-[#707070] bg-black" >
         <img src={imageSrc} alt="Description" className="rounded-t-xl" />
         <div className="p-4">
             <div className="flex items-center justify-between">
