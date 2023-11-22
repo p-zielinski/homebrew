@@ -32,11 +32,14 @@ export default async function Navbar() {
               <Link href="/courses" className={s.link}>
                 🧠Courses
               </Link>
-              {/* <Link href="/colleges" className={s.link}>
+              <Link href="/colleges" className={s.link}>
                🏛️Colleges
-              </Link> */}
+              </Link>
               <Link href="/campus" className={s.link}>
                 🍺Campus
+              </Link>
+              <Link href="/notion" className={s.link}>
+                🔮Notion
               </Link>
               {/* <Link href="/campus" className={s.link}>
                 📝Story

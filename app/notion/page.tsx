@@ -13,6 +13,8 @@ export default function DashboardPage() {
 
         <Card 
         title="Skills"
+        subtitle="View all students"
+        content="View all students"
         />
         
       </section>

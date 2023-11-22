@@ -7,7 +7,7 @@ import SubHero from '@/components/ui/SubHero';
 export default function CoursesPage() {
     const courses = [
         {
-          title: 'Python 101',
+          title: 'python-101',
           college : 'Homebrew',
           rating: '5.00',
           description: 'Learn the basics of Python programming.',

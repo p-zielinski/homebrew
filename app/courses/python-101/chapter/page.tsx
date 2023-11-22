@@ -34,43 +34,37 @@ export default function PythonPage() {
                     </>
                 )
                 },
-            ]}
-        />
-
-        <CardWatch
-            sections={[
                 {
-                subtitle: "Read 🤓",
-                content: (
-                    <>
-                        <p>Get some more</p>
-
+                    subtitle: "Read 🤓",
+                    content: (
+                        <>
+                            <p>Get some more</p>
+    
+                            <p className="mt-4">
+                            Welcome to your first Python lesson! Python is a versatile and widely-used programming language known for its readability and efficiency. In this lesson, we'll cover some of the basics to get you started.
+                        </p>
+    
+                        <h3 className="text-xl font-bold mt-6">What is Python?</h3>
                         <p className="mt-4">
-                        Welcome to your first Python lesson! Python is a versatile and widely-used programming language known for its readability and efficiency. In this lesson, we'll cover some of the basics to get you started.
-                    </p>
-
-                    <h3 className="text-xl font-bold mt-6">What is Python?</h3>
-                    <p className="mt-4">
-                        Python is a high-level, interpreted language that offers an approachable syntax and a powerful set of libraries. It's used in web development, data analysis, artificial intelligence, scientific computing, and more.
-                    </p>
-
-                    <h3 className="text-xl font-bold mt-6">Basic Syntax</h3>
-                    <p className="mt-4">
-                        Python syntax is clean and easy to understand. A basic Python program can be as simple as a line printing text to the console. For example:
-                    </p>
-
-                    <pre className="bg-[#202020] text-white p-4">
-                        <code>
-                            print("Hello, Python!")
-                        </code>
-                    </pre>
-
-                    </>
-                )
-                },
+                            Python is a high-level, interpreted language that offers an approachable syntax and a powerful set of libraries. It's used in web development, data analysis, artificial intelligence, scientific computing, and more.
+                        </p>
+    
+                        <h3 className="text-xl font-bold mt-6">Basic Syntax</h3>
+                        <p className="mt-4">
+                            Python syntax is clean and easy to understand. A basic Python program can be as simple as a line printing text to the console. For example:
+                        </p>
+    
+                        <pre className="bg-[#202020] text-white p-4">
+                            <code>
+                                print("Hello, Python!")
+                            </code>
+                        </pre>
+    
+                        </>
+                    )
+                    },
             ]}
         />
-
 
         <CardAI
             sections={[

@@ -11,7 +11,7 @@ const SubHero: React.FC<HeroProps> = ({ title, description }) => {
           <p className="text-5xl font-extrabold text-white sm:text-center sm:text-8xl">
             {title}
           </p>
-          <p className="text-white pt-4 sm:text-center sm:text-5xl p">
+          <p className="pt-4 sm:text-center sm:text-5xl p">
             {description}
           </p>
         </div>
