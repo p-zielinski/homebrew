@@ -9,8 +9,8 @@ export default function PythonPage() {
             <SubHero
                 title="Homebrew College"
             />
-            
-            <Card 
+
+            <Card
             title="Python 101 🐍"
             sections={[
                 {

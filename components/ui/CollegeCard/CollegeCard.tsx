@@ -8,13 +8,14 @@ interface CollegeCardProps {
     rating: string;
     imageSrc: string;
     studentCount: string;
+    pageId:string
   }
-  
+
 
 // Define CourseCard component
-const CollegeCard: React.FC<CourseCardProps> = ({ collegeName, rating, imageSrc, studentCount }) => {
+const CollegeCard: React.FC<CollegeCardProps> = ({ collegeName, rating, imageSrc, studentCount,pageId }) => {
     return (
-    <Link href={`/courses/${collegeName}`} passHref>
+    <Link href={`/colleges/${pageId}`} passHref>
         <div className="course-card border-2 rounded-xl border-[#707070] bg-black" >
         <img src={imageSrc} alt="Description" className="rounded-t-xl" />
             <div className="p-2">
