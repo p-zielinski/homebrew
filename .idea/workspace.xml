@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3d47a056-946b-4f8e-b8d6-791d83979e37" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/api/notion/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/colleges/[pageId]/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ui/NotionRendererWrapper/NotionRendererWrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/campus/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/campus/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/colleges/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/colleges/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/courses/python-101/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/courses/python-101/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/notion/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/signin/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/signin/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/CollegeCard/CollegeCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/CollegeCard/CollegeCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/middleware.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2YXQbZoKUmiBxS7X6lCtj67ncxh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/piotrzielinski/Documents/GitHub/homebrew/app/api/test",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/usr/local/lib/node_modules/prettier",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "ts.external.directory.path": "/Users/piotrzielinski/Documents/GitHub/homebrew/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/api/test" />
+      <recent name="$PROJECT_DIR$/app/colleges/[page]" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3d47a056-946b-4f8e-b8d6-791d83979e37" name="Changes" comment="" />
+      <created>1700669516736</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1700669516736</updated>
+      <workItem from="1700669517862" duration="7386000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
