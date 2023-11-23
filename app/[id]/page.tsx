@@ -16,6 +16,7 @@ import 'katex/dist/katex.min.css';
 import dynamic from 'next/dynamic';
 import Notion from '@/components/Notion';
 import { NotionPage } from '@/components/NotionPage';
+import { notionsIds } from '@/app/fakeDb/notionsIds';
 
 const Code = dynamic(() =>
   import('react-notion-x/build/third-party/code').then((m) => m.Code)
@@ -28,12 +29,7 @@ const Collection = dynamic(() =>
 const Equation = dynamic(() =>
   import('react-notion-x/build/third-party/equation').then((m) => m.Equation)
 );
-// const Pdf = dynamic(
-//   () => import('react-notion-x/build/third-party/pdf').then((m) => m.Pdf),
-//   {
-//     ssr: false
-//   }
-// );
+
 const Modal = dynamic(
   () => import('react-notion-x/build/third-party/modal').then((m) => m.Modal),
   {
@@ -42,11 +38,21 @@ const Modal = dynamic(
 );
 
 export default function CollegesPage() {
-  const { pageId }: { pageId: string } = useParams();
+  const { id }: { id: string } = useParams();
+  const pageId = notionsIds.find(
+    (notionRecord) => notionRecord.slug === id
+  )?.pageId;
+
   const router = useRouter();
 
   const [pageData, setPageData] = useState(undefined);
   useEffect(() => {
+    if (!pageId) {
+      const potentialSlugId = notionsIds.find(
+        (notionRecord) => notionRecord.pageId === id
+      )?.slug;
+      return router.push(potentialSlugId ? `/${potentialSlugId}` : '/colleges');
+    }
     (async () => {
       const res = await fetch(`/api/notion?pageId=${pageId}`, {
         method: 'GET',

@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { notionsIds } from '@/app/fakeDb/notionsIds';
 
 interface CollegeCardProps {
   collegeName: string;
@@ -17,8 +18,14 @@ const CollegeCard: React.FC<CollegeCardProps> = ({
   studentCount,
   pageId
 }) => {
+  const getPageSlug = (pageId: string) =>
+    notionsIds.find((notionRecord) => notionRecord.pageId === pageId)?.slug;
+
   return (
-    <Link href={`/${pageId}`} passHref>
+    <Link
+      href={getPageSlug(pageId) ? `/${getPageSlug(pageId)}` : `/colleges`}
+      passHref
+    >
       <div className="course-card border-2 rounded-xl border-[#707070] bg-black">
         <img src={imageSrc} alt="Description" className="rounded-t-xl" />
         <div className="p-2">
