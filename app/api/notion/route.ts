@@ -2,6 +2,7 @@ import { NotionAPI } from 'notion-client';
 import { NextRequest } from 'next/server';
 
 export async function GET(req: NextRequest) {
+  console.log(req);
   try {
     const pageId = req.nextUrl.searchParams.get('pageId');
     if (!pageId) {

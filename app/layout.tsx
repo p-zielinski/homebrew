@@ -4,6 +4,7 @@ import Navbar from '@/components/ui/Navbar';
 import { PropsWithChildren } from 'react';
 import 'styles/main.css';
 import { Analytics } from '@vercel/analytics/react';
+// import 'react-notion-x/src/styles.css';
 
 const meta = {
   title: 'Next.js Subscription Starter',
@@ -53,7 +54,7 @@ export default function RootLayout({
           <Navbar />
           <main
             id="skip"
-            className="min-h-[calc(100dvh-4rem)] md:min-h[calc(100dvh-5rem)]"
+            className="min-h-[calc(100dvh-4rem)] md:min-h[calc(100dvh-5rem)] bg-black"
           >
             {children}
             <Analytics />
