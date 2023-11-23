@@ -8,17 +8,22 @@
  */
 
 .notion {
-  --notion-max-width: 720px;
   --notion-header-height: 54px;
+  background-color: black;
+  max-width: 70%;
+  margin : 0 auto ;
+  margin-top: 4rem;
 }
 
 .notion-frame {
   padding: 0;
+  
 }
 
 .notion-page {
   padding-bottom: calc(max(5vh, 32px)) !important;
-  line-height: 1.65;
+  /* background-color: chartreuse; */
+  width: 100%;
 }
 
 .index-page {
@@ -33,15 +38,25 @@
   text-align: center;
 }
 
-.notion-asset-wrapper {
-  margin-top: 1em;
-  margin-bottom: 1em;
+/* .notion-asset-wrapper-embed .notion-asset-wrapper-full {
+  max-width: 100%;
+} */
+
+.notion-asset-wrapper  {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  box-shadow: none;
+  background: none;
+  
 }
 
-.notion-asset-wrapper-video > div,
+
+
+/* .notion-asset-wrapper-video > div,
 .notion-asset-wrapper-video video {
   width: 100% !important;
-}
+} */
 
 .notion-header .notion-nav-header {
   max-width: 1100px;
@@ -77,12 +92,12 @@
 }
 
 .notion-collection-card {
-  border-radius: 16px;
+  /* border-radius: 16px; */
   box-shadow: none;
 }
 
 .notion-collection-card-cover img {
-  border-radius: 16px;
+  border-radius: 0px;
 }
 
 .notion-collection-card {
@@ -90,7 +105,7 @@
 }
 
 .notion-collection-card-cover {
-  border-radius: 16px;
+  /* border-radius-top : 16px; */
   box-shadow: 2px 2px 8px 4px rgba(15, 15, 15, 0.1);
 }
 
@@ -193,12 +208,13 @@
 .notion-page-cover-wrapper,
 .notion-page-cover-wrapper span,
 .notion-page-cover-wrapper img {
-  max-width: 1200px !important;
-  border-radius: 24px;
+  /* max-width: 1600px !important; */
+  /* border-radius: 24px; */
 }
 
 .notion-page-cover-wrapper {
   box-shadow: 2px 2px 8px 4px rgba(15, 15, 15, 0.1);
+  
 }
 
 @media only screen and (max-width: 1200px) {
@@ -228,13 +244,13 @@
   background: transparent;
   background-origin: border-box;
   background-repeat: no-repeat;
-  background-position: 50% 100%;
+  background-position: 50% 50%;
   background-size: 0 0.1rem;
 }
 
 .notion-link:focus,
 .notion-link:hover {
-  border-bottom-color: transparent;
+  border-color: transparent;
 
   background-image: linear-gradient(90.68deg, #b439df 0.26%, #e5337e 102.37%);
   background-repeat: no-repeat;
@@ -343,17 +359,17 @@
   padding: 0;
   margin: 0;
   border-radius: 0;
-  background: none !important;
+  /* background: none !important; */
 }
 
 /* if you don't want rounded page icon images, remove this */
 .notion-page-icon-hero.notion-page-icon-image {
-  border-radius: 50%;
+  /* border-radius: 50%; */
   box-shadow: 0 8px 40px 0 rgb(0 0 0 / 21%);
 }
 .notion-page-icon-hero.notion-page-icon-image span,
 .notion-page-icon-hero.notion-page-icon-image img {
-  border-radius: 50%;
+  /* border-radius: 50%; */
 }
 
 .notion-header {
@@ -376,7 +392,7 @@
 
 .notion-bookmark:hover {
   border-image: linear-gradient(90.68deg, #b439df 0.26%, #e5337e 102.37%);
-  border-image-slice: 1;
+  /* border-image-slice: 1; */
 }
 
 .notion-block-ab9a258d6cf444f3bb40dc2600feae91 .notion-column {

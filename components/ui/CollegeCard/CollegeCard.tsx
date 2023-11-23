@@ -12,22 +12,17 @@ interface CollegeCardProps {
 // Define CourseCard component
 const CollegeCard: React.FC<CollegeCardProps> = ({
   collegeName,
-  rating,
   imageSrc,
-  studentCount,
   pageId
 }) => {
   return (
     <Link href={`/${pageId}`} passHref>
-      <div className="course-card border-2 rounded-xl border-[#707070] bg-black">
-        <img src={imageSrc} alt="Description" className="rounded-t-xl" />
-        <div className="p-2">
-          <div className="flex justify-between items-center">
-            <h3 className="font-extrabold text-white sm:text-xl">
-              {collegeName}
-            </h3>
-            <p>⭐️{rating}</p>
-          </div>
+      <div className="rounded-xl bg-black">
+        <img src={imageSrc} alt="Description" className="h-96 w-full object-cover rounded-t-xl" />
+        <div className="p-6">
+          <h3 className="sm:text-center sm:text-5xl p">
+                {collegeName}
+          </h3>
         </div>
       </div>
     </Link>

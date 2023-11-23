@@ -112,7 +112,6 @@ export const NotionPage = ({ recordMap, pageId }: any) => {
       Collection,
       Equation,
       Modal,
-      Tweet,
       Header: NotionPageHeader,
       propertyLastEditedTimeValue,
       propertyTextValue,
@@ -164,28 +163,22 @@ export const NotionPage = ({ recordMap, pageId }: any) => {
     'config.description';
 
   return (
-    <>
-      <PageHead pageId={pageId} title={title} description={socialDescription} />
-      <NotionRenderer
-        bodyClassName={cs(styles.notion)}
-        components={components}
-        darkMode={false}
-        recordMap={recordMap}
-        fullPage={!isLiteMode}
-        previewImages={!!recordMap.preview_images}
-        showCollectionViewDropdown={false}
-        showTableOfContents={showTableOfContents}
-        minTableOfContentsItems={minTableOfContentsItems}
-        // defaultPageIcon={config.defaultPageIcon}
-        // defaultPageCover={config.defaultPageCover}
-        // defaultPageCoverPosition={config.defaultPageCoverPosition}
-        // mapPageUrl={siteMapPageUrl}
-        // mapImageUrl={mapImageUrl}
-        // searchNotion={config.isSearchEnabled ? searchNotion : null}
-        // pageAside={true}
-        footer={footer}
-      />
-      <GitHubShareButton />
-    </>
+      <>
+        <PageHead pageId={pageId} title={title} description={socialDescription} />
+        <NotionRenderer
+          // bodyClassName={cs(styles.notion)}
+          components={components}
+          darkMode={true}
+          recordMap={recordMap}
+          fullPage={!isLiteMode}
+          previewImages={!!recordMap.preview_images}
+          showCollectionViewDropdown={false}
+          // defaultPageIcon={config.defaultPageIcon}
+          // defaultPageCover={config.defaultPageCover}
+          // defaultPageCoverPosition={config.defaultPageCoverPosition}
+          // mapPageUrl={siteMapPageUrl}
+          // mapImageUrl={mapImageUrl}
+        />
+      </>
   );
 };

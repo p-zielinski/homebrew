@@ -10,12 +10,11 @@ export default function Footer() {
         <div className="flex flex-col">
           <h1 className="text-xl font-bold">Made with ♥️ in London</h1>
         </div>
-        <div className="flex flex-col">
-          {/* <h1 className="text-xl font-bold">Contact</h1> */}
+        {/* <div className="flex flex-col">
             <Link className={s.link} href="/campus">
                   📝Story
             </Link>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

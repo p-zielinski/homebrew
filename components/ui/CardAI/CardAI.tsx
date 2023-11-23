@@ -12,7 +12,7 @@ interface CardProps {
 
 const CardAI: React.FC<CardProps> = ({ title, sections = [] }) => {
   return (
-    <div className="mx-auto max-w-7xl px-2 pt-20 lg:px-8 lg:py-8">
+    <div className="mx-auto max-w-5xl px-2 pt-20 lg:px-8 lg:py-8">
       <div className="bg-vc-border-gradient rounded-xl p-px">       
         <div className="rounded-xl bg-black p-3.5 lg:p-6">
         {sections.map((section, index) => (
@@ -21,9 +21,9 @@ const CardAI: React.FC<CardProps> = ({ title, sections = [] }) => {
                   <p className="text-xl">{section.content}</p>
                 </div>
               ))}
-          <div className="mt-4">
+          <div className="mt-4 text-2xl ">
             {/* Chat messages area */}
-            <div className="h-[36rem] overflow-y-auto p-4 bg-black border border-gray-400 rounded-lg">
+            <div className="h-[24rem] overflow-y-auto p-4 bg-black border border-gray-400 rounded-lg">
               {/* Placeholder for AI responses */}
               <p><strong>AI:</strong> Hello! Are you ready to anwser so questions?</p>
             </div>
