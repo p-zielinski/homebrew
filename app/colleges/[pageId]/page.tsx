@@ -60,22 +60,24 @@ export default function CollegesPage() {
 
   return (
     <section>
-      {pageData ? (
-        <NotionRenderer
-          recordMap={pageData}
-          fullPage={true}
-          darkMode={false}
-          components={{
-            Code,
-            Collection,
-            Equation,
-            Modal
-            // Pdf
-          }}
-        />
-      ) : (
-        'loading'
-      )}
+      <div className="container mx-auto">
+        {pageData ? (
+          <NotionRenderer
+            recordMap={pageData}
+            fullPage={true}
+            darkMode={true}
+            components={{
+              Code,
+              Collection,
+              Equation,
+              Modal
+              // Pdf
+            }}
+          />
+        ) : (
+          'loading'
+        )}
+      </div>
     </section>
   );
 }

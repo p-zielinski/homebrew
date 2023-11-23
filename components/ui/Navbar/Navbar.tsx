@@ -26,21 +26,18 @@ export default async function Navbar() {
               {/* <Link href="/jobs" className={s.link}>
                 🚀Jobs
               </Link> */}
-              <Link href="/dashboard" className={s.link}>
+              {/* <Link href="/dashboard" className={s.link}>
                 🕹️Dashboard
-              </Link>
-              <Link href="/courses" className={s.link}>
+              </Link> */}
+              {/* <Link href="/courses" className={s.link}>
                 🧠Courses
-              </Link>
+              </Link> */}
               <Link href="/colleges" className={s.link}>
                🏛️Colleges
               </Link>
-              <Link href="/campus" className={s.link}>
+              {/* <Link href="/campus" className={s.link}>
                 🍺Campus
-              </Link>
-              <Link href="/notion" className={s.link}>
-                🔮Notion
-              </Link>
+              </Link> */}
               {/* <Link href="/campus" className={s.link}>
                 📝Story
               </Link> */}
