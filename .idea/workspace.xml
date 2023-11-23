@@ -5,16 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d47a056-946b-4f8e-b8d6-791d83979e37" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/api/notion/route.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/colleges/[pageId]/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ui/NotionRendererWrapper/NotionRendererWrapper.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/campus/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/campus/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/colleges/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/colleges/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/courses/python-101/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/courses/python-101/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/notion/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/signin/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/signin/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ErrorPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Footer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/GitHubShareButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Loading.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/LoadingIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Notion.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/NotionPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/NotionPageHeader.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Page404.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/PageActions.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/PageAside.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/PageHead.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/PageSocial.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/PageSocial.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/styles.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/global.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/notion.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/notion/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/notion/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/colleges/[pageId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/[pageId]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/ui/CollegeCard/CollegeCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/CollegeCard/CollegeCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/middleware.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
@@ -36,6 +49,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2YXQbZoKUmiBxS7X6lCtj67ncxh" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -46,7 +62,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/piotrzielinski/Documents/GitHub/homebrew/app/api/test",
+    "last_opened_file_path": "/Users/piotrzielinski/Documents/GitHub/homebrew/styles",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -60,8 +76,13 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/styles" />
+      <recent name="$PROJECT_DIR$/app/[pageId]" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/app/api/test" />
       <recent name="$PROJECT_DIR$/app/colleges/[page]" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -77,6 +98,11 @@
       <option name="presentableId" value="Default" />
       <updated>1700669516736</updated>
       <workItem from="1700669517862" duration="7386000" />
+      <workItem from="1700719553251" duration="688000" />
+      <workItem from="1700727796736" duration="357000" />
+      <workItem from="1700728165683" duration="901000" />
+      <workItem from="1700756387617" duration="12000" />
+      <workItem from="1700756405123" duration="9374000" />
     </task>
     <servers />
   </component>

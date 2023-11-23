@@ -8,11 +8,14 @@ import { NotionAPI } from 'notion-client';
 import { NotionRenderer } from 'react-notion-x';
 // core styles shared by all of react-notion-x (required)
 import 'react-notion-x/src/styles.css';
+import '../../styles/notion.css';
 // used for code syntax highlighting (optional)
 import 'prismjs/themes/prism-tomorrow.css';
 // used for rendering equations (optional)
 import 'katex/dist/katex.min.css';
 import dynamic from 'next/dynamic';
+import Notion from '@/components/Notion';
+import { NotionPage } from '@/components/NotionPage';
 
 const Code = dynamic(() =>
   import('react-notion-x/build/third-party/code').then((m) => m.Code)
@@ -62,18 +65,7 @@ export default function CollegesPage() {
     <section>
       <div className="container mx-auto">
         {pageData ? (
-          <NotionRenderer
-            recordMap={pageData}
-            fullPage={true}
-            darkMode={true}
-            components={{
-              Code,
-              Collection,
-              Equation,
-              Modal
-              // Pdf
-            }}
-          />
+          <NotionPage recordMap={pageData} pageId={pageId} />
         ) : (
           'loading'
         )}
