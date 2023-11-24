@@ -1,11 +1,5 @@
-'use client';
-
-import React, { useEffect, useState } from 'react';
-import SubHero from '@/components/ui/SubHero';
-import NotionCard from '@/components/ui/CollegeCard';
-import { useParams, useRouter } from 'next/navigation';
-import { NotionAPI } from 'notion-client';
-import { NotionRenderer } from 'react-notion-x';
+import React from 'react';
+import { redirect } from 'next/navigation';
 // core styles shared by all of react-notion-x (required)
 import 'react-notion-x/src/styles.css';
 import '../../styles/notion.css';
@@ -13,69 +7,28 @@ import '../../styles/notion.css';
 import 'prismjs/themes/prism-tomorrow.css';
 // used for rendering equations (optional)
 import 'katex/dist/katex.min.css';
-import dynamic from 'next/dynamic';
-import Notion from '@/components/Notion';
 import { NotionPage } from '@/components/NotionPage';
 import { notionsIds } from '@/app/fakeDb/notionsIds';
 
-const Code = dynamic(() =>
-  import('react-notion-x/build/third-party/code').then((m) => m.Code)
-);
-const Collection = dynamic(() =>
-  import('react-notion-x/build/third-party/collection').then(
-    (m) => m.Collection
-  )
-);
-const Equation = dynamic(() =>
-  import('react-notion-x/build/third-party/equation').then((m) => m.Equation)
-);
-
-const Modal = dynamic(
-  () => import('react-notion-x/build/third-party/modal').then((m) => m.Modal),
-  {
-    ssr: false
-  }
-);
-
-export default function CollegesPage() {
-  const { id }: { id: string } = useParams();
+export default async function CollegesPage(context: {params:{id:string}, searchParams: Record<string,string>}) {
   const pageId = notionsIds.find(
-    (notionRecord) => notionRecord.slug === id
+    (notionRecord) => notionRecord.slug === context.params.id
   )?.pageId;
-
-  const router = useRouter();
-
-  const [pageData, setPageData] = useState(undefined);
-  useEffect(() => {
-    if (!pageId) {
-      const potentialSlugId = notionsIds.find(
-        (notionRecord) => notionRecord.pageId === id
-      )?.slug;
-      return router.push(potentialSlugId ? `/${potentialSlugId}` : '/colleges');
-    }
-    (async () => {
-      const res = await fetch(`/api/notion?pageId=${pageId}`, {
-        method: 'GET',
-        headers: new Headers({ 'Content-Type': 'application/json' }),
-        credentials: 'same-origin'
-      });
-      try {
-        setPageData(await res.json());
-      } catch (e) {
-        router.push('/colleges');
-      }
-    })();
-  }, []);
-
-  return (
-    <section>
-      <div className="container mx-auto">
-        {pageData ? (
-          <NotionPage recordMap={pageData} pageId={pageId} />
-        ) : (
-          'loading'
-        )}
-      </div>
-    </section>
-  );
+  if (!pageId) {
+    const potentialSlugId = notionsIds.find(
+      (notionRecord) => notionRecord.pageId === context.params.id
+    )?.slug;
+    return redirect(potentialSlugId ? `/${potentialSlugId}` : '/colleges');
+  }
+  const res = await fetch(`http://localhost:3000/api/notion?pageId=${pageId}`, {
+    method: 'GET',
+    headers: new Headers({ 'Content-Type': 'application/json' }),
+    credentials: 'same-origin'
+  });
+  try {
+    const pageData = (await res.json());
+    return <NotionPage recordMap={pageData} pageId={pageId} />
+  } catch (e) {
+    redirect('/colleges')
+  }
 }
