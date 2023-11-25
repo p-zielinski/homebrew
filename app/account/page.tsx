@@ -44,6 +44,7 @@ export default async function Account() {
     const { error } = await supabase
       .from('users')
       .update({ full_name: newName })
+      // @ts-ignore
       .eq('id', user?.id);
     if (error) {
       console.log(error);

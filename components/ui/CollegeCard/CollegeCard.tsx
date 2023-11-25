@@ -4,9 +4,7 @@ import { notionsIds } from '@/app/fakeDb/notionsIds';
 
 interface CollegeCardProps {
   collegeName: string;
-  rating: string;
   imageSrc: string;
-  studentCount: string;
   pageId: string;
 }
 
@@ -25,12 +23,14 @@ const CollegeCard: React.FC<CollegeCardProps> = ({
       passHref
     >
       <div className="rounded-xl bg-black">
-        <img src={imageSrc} alt="Description" className="h-96 w-full object-cover rounded-t-xl" />
+        <img
+          src={imageSrc}
+          alt="Description"
+          className="h-96 w-full object-cover rounded-t-xl"
+        />
         <div className="p-2">
           <div className="p-6">
-            <h3 className="sm:text-center sm:text-5xl p">
-              {collegeName}
-            </h3>
+            <h3 className="sm:text-center sm:text-5xl p">{collegeName}</h3>
           </div>
         </div>
       </div>

@@ -1,8 +1,7 @@
 import React from 'react';
-import NotionCard from '@/components/ui/CollegeCard';
+import CollegeCard from '@/components/ui/CollegeCard';
 import SubHero from '@/components/ui/SubHero';
 import CardAI from '@/components/ui/CardAI';
-
 
 export default function CollegesPage() {
   const courses = [
@@ -24,27 +23,19 @@ export default function CollegesPage() {
 
       <div className="pt-12 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
         {courses.map((course, index) => (
-          <NotionCard key={index} {...course} />
+          <CollegeCard key={index} {...course} />
         ))}
       </div>
 
       <CardAI
-            sections={[
-                {
-                subtitle: "Crash it🔥",
-                content: (
-                    <>
-                        <p>Show us what you got</p>
-                    </>
-                )
-                },
-            ]}
-            />
-
-
-      
-
-
+        sections={[
+          {
+            subtitle: 'Crash it🔥',
+            content: 'Show us what you got'
+          }
+        ]}
+        title={''}
+      />
     </section>
   );
 }
