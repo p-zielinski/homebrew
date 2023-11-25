@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import * as React from 'react';
 import dynamic from 'next/dynamic';
@@ -165,22 +165,23 @@ export const NotionPage = ({ recordMap, pageId }: any) => {
     'config.description';
 
   return (
-      <>
-        <PageHead pageId={pageId} title={title} description={socialDescription} />
-        <NotionRenderer
-          // bodyClassName={cs(styles.notion)}
-          components={components}
-          darkMode={true}
-          recordMap={recordMap}
-          fullPage={!isLiteMode}
-          previewImages={!!recordMap.preview_images}
-          showCollectionViewDropdown={false}
-          // defaultPageIcon={config.defaultPageIcon}
-          // defaultPageCover={config.defaultPageCover}
-          // defaultPageCoverPosition={config.defaultPageCoverPosition}
-          // mapPageUrl={siteMapPageUrl}
-          // mapImageUrl={mapImageUrl}
-        />
-      </>
+    <>
+      <PageHead pageId={pageId} title={title} description={socialDescription} />
+      <NotionRenderer
+        // bodyClassName={cs(styles.notion)}
+        components={components}
+        darkMode={true}
+        recordMap={recordMap}
+        fullPage={!isLiteMode}
+        previewImages={!!recordMap.preview_images}
+        showCollectionViewDropdown={false}
+        // defaultPageIcon={config.defaultPageIcon}
+        // defaultPageCover={config.defaultPageCover}
+        // defaultPageCoverPosition={config.defaultPageCoverPosition}
+        // mapPageUrl={siteMapPageUrl}
+        // mapImageUrl={mapImageUrl}
+      />
+      <div style={{ paddingBottom: '100px' }} />
+    </>
   );
 };
