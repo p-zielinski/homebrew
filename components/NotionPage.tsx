@@ -14,7 +14,6 @@ import TweetEmbed from 'react-tweet-embed';
 import { useSearchParam } from 'react-use';
 
 import { GitHubShareButton } from './GitHubShareButton';
-import { Loading } from './Loading';
 import { NotionPageHeader } from './NotionPageHeader';
 import { PageHead } from './PageHead';
 import styles from './styles.module.css';

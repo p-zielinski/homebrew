@@ -53,6 +53,7 @@ const CardAI: React.FC<CardProps> = ({ title, sections = [] }) => {
               />
               <button
                 className="ml-4 px-4 py-2 bg-blue-500 text-white rounded-lg"
+                //@ts-ignore
                 onClick={handleSubmit}
               >
                 Send
