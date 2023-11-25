@@ -1,52 +1,29 @@
 'use client';
 
-import { useChat, type Message } from 'ai/react';
-
-import { ChatList } from './chat-list';
-import { ChatPanel } from './chat-panel';
-import { EmptyScreen } from './empty-screen';
-import { ChatScrollAnchor } from './chat-scroll-anchor';
-import { useLocalStorage } from '@/lib/hooks/use-local-storage';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle
-} from './ui/dialog';
 import { useState } from 'react';
-import { Button } from './ui/button';
-import { Input } from './ui/input';
-import { toast } from 'react-hot-toast';
 import cn from 'classnames';
+import { useChat } from 'ai/react';
 
 export interface ChatProps extends React.ComponentProps<'div'> {
-  initialMessages: Message[];
+  initialMessages: any[];
   chatId: string;
 }
 
 export function Chat({ chatId, initialMessages }: ChatProps) {
-  const [messages, setMessages] = useState(initialMessages);
-  const [message, setMessage] = useState('');
+  const { messages, input, handleInputChange, handleSubmit } = useChat();
+
   return (
     <>
       <div className={cn('pb-[200px] pt-4 md:pt-10')}>
-        {JSON.stringify(messages)}
+        {messages.map((message: { role: string; content: string }) => (
+          <div>
+            {message.role}: {message.content}
+          </div>
+        ))}
       </div>
 
-      <Input
-        value={message}
-        placeholder="Message"
-        onChange={(e: any) => setMessage(e.target.value)}
-      />
-      <button
-        onClick={() => {
-          //
-        }}
-      >
-        Send Message
-      </button>
+      <input value={input} placeholder="Message" onChange={handleInputChange} />
+      <button onClick={handleSubmit}>Send Message</button>
     </>
   );
 }

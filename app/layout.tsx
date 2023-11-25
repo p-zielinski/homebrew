@@ -24,20 +24,18 @@ export const metadata = {
   favicon: meta.favicon,
   url: meta.url,
   type: meta.type,
-  openGraph: {
-    url: meta.url,
-    title: meta.title,
-    description: meta.description,
-    cardImage: meta.cardImage,
-    type: meta.type,
-    site_name: meta.title
-  },
+  // openGraph: {
+  //   url: meta.url,
+  //   title: meta.title,
+  //   description: meta.description,
+  //   type: meta.type,
+  //   site_name: meta.title
+  // },
   twitter: {
     card: 'summary_large_image',
     site: '@vercel',
     title: meta.title,
-    description: meta.description,
-    cardImage: meta.cardImage
+    description: meta.description
   }
 };
 

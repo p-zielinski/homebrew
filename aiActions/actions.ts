@@ -5,7 +5,8 @@ import { kv } from '@vercel/kv';
 import { Chat } from '@/types/types';
 
 export async function getChat(id: string) {
-  return await kv.hgetall<Chat>(`chat:${id}`);
+  return { messages: [] };
+  // return await kv.hgetall<Chat>(`chat:${id}`);
 }
 
 export async function removeChat({ id, path }: { id: string; path: string }) {
