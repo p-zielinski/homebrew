@@ -13,12 +13,9 @@ import { NotionRenderer } from 'react-notion-x';
 import TweetEmbed from 'react-tweet-embed';
 import { useSearchParam } from 'react-use';
 
-import { Footer } from './Footer';
 import { GitHubShareButton } from './GitHubShareButton';
 import { Loading } from './Loading';
 import { NotionPageHeader } from './NotionPageHeader';
-import { Page404 } from './Page404';
-import { PageAside } from './PageAside';
 import { PageHead } from './PageHead';
 import styles from './styles.module.css';
 
@@ -57,10 +54,6 @@ const Modal = dynamic(
     ssr: false
   }
 );
-
-const Tweet = ({ id }: { id: string }) => {
-  return <TweetEmbed tweetId={id} />;
-};
 
 const propertyLastEditedTimeValue = (
   { block, pageHeader }: any,
@@ -144,15 +137,6 @@ export const NotionPage = ({ recordMap, pageId }: any) => {
   const showTableOfContents = !!isBlogPost;
   const minTableOfContentsItems = 3;
 
-  const pageAside = React.useMemo(
-    () => (
-      <PageAside block={block} recordMap={recordMap} isBlogPost={isBlogPost} />
-    ),
-    [block, recordMap, isBlogPost]
-  );
-
-  const footer = React.useMemo(() => <Footer />, []);
-
   if (!block) {
     return <>a</>;
     // <Page404 pageId={pageId} error={error} />;
@@ -166,7 +150,6 @@ export const NotionPage = ({ recordMap, pageId }: any) => {
 
   return (
     <>
-      <PageHead pageId={pageId} title={title} description={socialDescription} />
       <NotionRenderer
         // bodyClassName={cs(styles.notion)}
         components={components}
