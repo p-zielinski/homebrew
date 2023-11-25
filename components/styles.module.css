@@ -7,7 +7,7 @@
 .notion {
   --notion-max-width: 720px;
   --notion-header-height: 54px;
-  background-color:red;
+  background-color:rgb(0, 0, 255);
 }
 
 .container {
