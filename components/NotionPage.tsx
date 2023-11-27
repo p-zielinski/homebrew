@@ -17,6 +17,8 @@ import { GitHubShareButton } from './GitHubShareButton';
 import { NotionPageHeader } from './NotionPageHeader';
 import { PageHead } from './PageHead';
 import styles from './styles.module.css';
+import CardAI from '@/components/ui/CardAI';
+import { nanoid } from 'ai';
 
 // -----------------------------------------------------------------------------
 // dynamic imports for optional components
@@ -147,6 +149,22 @@ export const NotionPage = ({ recordMap, pageId }: any) => {
     getPageProperty<string>('Description', block, recordMap) ||
     'config.description';
 
+  const showAiList: { pageId: string; options?: any }[] = [
+    {
+      pageId: '0a7bbaccc0e34ccfa417c36a2f6e9b66',
+      options: {
+        initialMessages: [
+          {
+            id: nanoid(),
+            role: 'system',
+            content: 'You use a lot of emojis.'
+          }
+        ]
+      }
+    }
+  ];
+  const showAi = showAiList.find((showAiItem) => showAiItem.pageId === pageId);
+
   return (
     <>
       <NotionRenderer
@@ -163,7 +181,20 @@ export const NotionPage = ({ recordMap, pageId }: any) => {
         // mapPageUrl={siteMapPageUrl}
         // mapImageUrl={mapImageUrl}
       />
-      <div style={{ paddingBottom: '100px' }} />
+
+      {showAi && (
+        <CardAI
+          sections={[
+            {
+              subtitle: 'Crash it🔥',
+              content: 'Show us what you got'
+            }
+          ]}
+          title={''}
+          options={showAi?.options}
+        />
+      )}
+      <div style={{ paddingBottom: showAi ? '50px' : '100px' }} />
     </>
   );
 };

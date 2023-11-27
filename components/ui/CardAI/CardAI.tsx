@@ -2,6 +2,8 @@
 
 import React from 'react';
 import { useChat } from 'ai/react';
+import { nanoid } from 'ai';
+import { Message } from 'ai/react/dist';
 
 interface ContentSection {
   subtitle: string;
@@ -11,10 +13,13 @@ interface ContentSection {
 interface CardProps {
   title: string;
   sections?: ContentSection[]; // Make sections optional
+  options?: { initialMessages: Message[] } & Record<string, any>;
 }
 
-const CardAI: React.FC<CardProps> = ({ title, sections = [] }) => {
-  const { messages, input, handleInputChange, handleSubmit } = useChat();
+const CardAI: React.FC<CardProps> = ({ title, sections = [], options }) => {
+  const { messages, input, handleInputChange, handleSubmit } = useChat({
+    initialMessages: options?.initialMessages ? options.initialMessages : []
+  });
 
   return (
     <div className="mx-auto max-w-5xl px-2 pt-20 lg:px-8 lg:py-8">
@@ -34,12 +39,16 @@ const CardAI: React.FC<CardProps> = ({ title, sections = [] }) => {
                 <strong>AI:</strong> Hello! Are you ready to anwser so
                 questions?
               </p>
-              {messages.map((message: { role: string; content: string }) => (
-                <p>
-                  <strong>{message.role === 'user' ? 'You' : 'AI'}</strong>:{' '}
-                  {message.content}
-                </p>
-              ))}
+              {messages
+                .filter((message) =>
+                  ['user', 'assistant'].includes(message.role)
+                )
+                .map((message: Message) => (
+                  <p key={message.id}>
+                    <strong>{message.role === 'user' ? 'You' : 'AI'}</strong>:{' '}
+                    {message.content}
+                  </p>
+                ))}
             </div>
 
             {/* User input area */}

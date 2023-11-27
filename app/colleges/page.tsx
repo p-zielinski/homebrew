@@ -1,7 +1,6 @@
 import React from 'react';
 import CollegeCard from '@/components/ui/CollegeCard';
 import SubHero from '@/components/ui/SubHero';
-import CardAI from '@/components/ui/CardAI';
 
 export default function CollegesPage() {
   const courses = [
@@ -26,16 +25,6 @@ export default function CollegesPage() {
           <CollegeCard key={index} {...course} />
         ))}
       </div>
-
-      <CardAI
-        sections={[
-          {
-            subtitle: 'Crash it🔥',
-            content: 'Show us what you got'
-          }
-        ]}
-        title={''}
-      />
     </section>
   );
 }
